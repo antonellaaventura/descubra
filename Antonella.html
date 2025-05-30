@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Descubra Antonella</title>
   <meta name="description" content="Exclusiva. Elegante. Provocante. Descubra experiências únicas com Antonella. Promoção por tempo limitado.">
+  <meta name="robots" content="noindex,nofollow">
   <style>
     body {
       margin: 0;
@@ -96,7 +97,7 @@
       color: #ffcd75;
     }
 
-    /* Botão flutuante persuasivo */
+    /* Botão flutuante */
     .float-btn {
       position: fixed;
       bottom: 20px;
@@ -125,7 +126,6 @@
       100% { transform: scale(1); box-shadow: 0 0 20px rgba(242, 93, 93, 0.8); }
     }
 
-    /* Contador de vendas */
     .sales-counter {
       margin-top: 30px;
       font-size: 1.1em;
@@ -191,7 +191,7 @@
     <div class="popup" role="dialog" aria-modal="true">
       <h2>🔞 Acesso Limitado</h2>
       <p>Conteúdo exclusivo. Entrada apenas para maiores de 18 anos.</p>
-      <button onclick="document.getElementById('popup').style.display='none'">Entrar</button>
+      <button id="enter-btn" aria-label="Confirmar maioridade e entrar">Entrar</button>
     </div>
   </div>
 
@@ -241,14 +241,22 @@
     Vendas realizadas até agora: <span id="sales-count">86</span>
   </div>
 
-  <!-- Botão flutuante de compra -->
+  <!-- Botão flutuante -->
   <a href="https://LBKAnQ.short.gy/glooblo" class="float-btn" target="_blank" rel="noopener noreferrer">
     🛒 COMPRE AGORA
   </a>
 
-  <!-- Script para contador -->
+  <!-- Script para popup -->
   <script>
-    let count = 86; // Valor inicial acima de 85
-    const salesDisplay = document.getElementBy
+    document.getElementById('enter-btn').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
+
+
+ 
 
 
